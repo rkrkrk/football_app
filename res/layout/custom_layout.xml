@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutSetuppm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:focusable="true"
+        android:minHeight="40dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" >
+
+        <Button
+            android:id="@+id/bReset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_custom"
+            android:gravity="center_vertical|center_horizontal"
+            android:minHeight="32dp"
+            android:minLines="2"
+            android:text="reset all to default"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bQuit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_custom"
+            android:gravity="center_vertical|center_horizontal"
+            android:minHeight="32dp"
+            android:minLines="2"
+            android:text="quit"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bSaveAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_custom"
+            android:gravity="center_vertical|center_horizontal"
+            android:minHeight="32dp"
+            android:text="save all"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:minHeight="30dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="Items below are configurable for the app. Tap on the value you want to change/edit and enter the new value. Tap SAVE ALL to save and exit. Tap QUIT to exit without saving. "
+                android:textColor="#ff0000"
+                android:textSize="9sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="#dddddd"
+                android:gravity="center_vertical|center"
+                android:minHeight="30dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="setup opposition team numbers"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="34dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/ButtonP15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="15"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="14"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="13"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="34dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/ButtonP12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="12"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="11"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="10"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="34dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/ButtonP09"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="9"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP08"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="8"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="34dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/ButtonP07"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="7"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP06"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="6"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP05"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="5"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="34dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/ButtonP04"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="4"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP03"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ButtonP02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:paddingBottom="4dp"
+                    android:text="2"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="34dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/ButtonP01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:text="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#aaccdd"
+                android:gravity="center_vertical|center"
+                android:minHeight="40dp"
+                android:text="setup custom stats"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="#7788ff"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/etTitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center"
+                    android:minHeight="30dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="stat 1 title"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etTitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center"
+                    android:minHeight="30dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="stat 2 title"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="30dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 1"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 1"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 2"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 2"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA03"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 3"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB03"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 3"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA04"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 4"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB04"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 4"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA05"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 5"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB05"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 5"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA06"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 6"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB06"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 6"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA07"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 7"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB07"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 7"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA08"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 8"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB08"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 8"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTA09"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 9"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etTB09"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="option 9"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+
+            
+            
+
+            
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".99"
+                android:background="#ffaaaa"
+                android:gravity="center_vertical|center"
+                android:minHeight="30dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="setup frees"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ee6666"
+                android:gravity="center_vertical|center"
+                android:minHeight="30dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="tap text fields below to edit reasons for conceding frees"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffaaaa"
+                android:minHeight="30dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="steps"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees06"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="push/pull/trip"
+                    android:textSize="12sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffaaaa"
+                android:minHeight="30dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="2 hops"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees07"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="holding"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffaaaa"
+                android:minHeight="30dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees03"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="throw"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees08"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="striking"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffaaaa"
+                android:minHeight="30dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees04"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="square ball"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees09"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="charging"
+                    android:textSize="12sp" />
+            </LinearLayout>
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffaaaa"
+                android:minHeight="30dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees05"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="pick off ground"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="bottom|left" />
+
+                <EditText
+                    android:id="@+id/etFrees10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="bottom|left"
+                    android:inputType="text"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="other"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

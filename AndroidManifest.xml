@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fm.footballstats"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="16" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" android:debuggable="false">
+        <activity
+            android:name="fm.footballstats.StartupActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="fm.footballstats.MatchApplication"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.PanelEditActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.PanelListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.TrainingListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.TrainingReviewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.MatchEditActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.MatchListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.ShotsListActivity"
+            android:label="@string/app_name" >
+        </activity>
+      <activity
+            android:name="fm.footballstats.db.run.CustomListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.ShotsPlayerListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.PuckOutsListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.db.run.FreesListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.footballstats.HelpActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="fm.footballstats.CustomActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <provider
+            android:name="fm.footballstats.db.PanelContentProvider"
+            android:authorities="fm.footballstats.provider.panel"
+            android:exported="false" />
+        <provider
+            android:name="fm.footballstats.db.MatchContentProvider"
+            android:authorities="fm.footballstats.provider.match"
+            android:exported="false" />
+        <provider
+            android:name="fm.footballstats.db.ShotContentProvider"
+            android:authorities="fm.footballstats.provider.shots"
+            android:exported="false" />
+        <provider
+            android:name="fm.footballstats.db.CustomContentProvider"
+            android:authorities="fm.footballstats.provider.custom"
+            android:exported="false" />
+        <provider
+            android:name="fm.footballstats.db.PuckOutContentProvider"
+            android:authorities="fm.footballstats.provider.puckouts"
+            android:exported="false" />
+        <provider
+            android:name="fm.footballstats.db.FreeContentProvider"
+            android:authorities="fm.footballstats.provider.frees"
+            android:exported="false" />
+        <provider
+            android:name="fm.footballstats.db.TrainingContentProvider"
+            android:authorities="fm.footballstats.provider.training"
+            android:exported="false" />
+        <provider
+            android:name="fm.footballstats.db.AttendanceContentProvider"
+            android:authorities="fm.footballstats.provider.attendance"
+            android:exported="false" />
+        <provider
+            android:name="fm.footballstats.db.PositionContentProvider"
+            android:authorities="fm.footballstats.provider.positions"
+            android:exported="false" />
+    </application>
+
+</manifest>

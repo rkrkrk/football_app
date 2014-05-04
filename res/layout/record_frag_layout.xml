@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRecorddm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:background="#bbbbbb"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/which_half"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="2dp"
+                android:text="START FIRST HALF "
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:text=" "
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Start Time: 00:00"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/TextView10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/TextView09"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:gravity="bottom|center_horizontal"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/ttime_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".97"
+                android:gravity="bottom|center_horizontal"
+                android:text="time gone"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/TextView08"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:gravity="bottom|center_horizontal"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/time_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".97"
+                android:gravity="bottom|center_horizontal"
+                android:text="time left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/mins_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.02"
+                android:gravity="bottom|center_horizontal"
+                android:text="mins/half"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1.01"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/start_stop_timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="start"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/decrease_timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1.1"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:text="-"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/time_gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".97"
+                android:background="#ccc"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="00:00"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/increase_timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1.1"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:text="+"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/time_to_go"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical|fill_horizontal|end"
+                android:layout_weight=".97"
+                android:background="#ccc"
+                android:gravity="center_vertical|center_horizontal"
+                android:minWidth="60dp"
+                android:text="00:00"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/mins_per_half"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1.02"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="30"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.08"
+            android:background="#bbbbbb"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/ourTeam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="OWN TEAM"
+                android:textColor="#f00"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/oppTeam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="OPPOSITION"
+                android:textColor="#f00"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:orientation="horizontal"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/TextView05"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.03"
+                android:gravity="center_horizontal"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/goals_label2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".98"
+                android:gravity="bottom|center_horizontal"
+                android:text="goals"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/points_label2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".96"
+                android:gravity="bottom|center_horizontal"
+                android:text="points"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/TextView06"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.03"
+                android:gravity="center_horizontal"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.07"
+                android:gravity="center_horizontal"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.03"
+                android:gravity="center_horizontal"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/goals_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".98"
+                android:gravity="bottom|center_horizontal"
+                android:text="goals"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/points_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".96"
+                android:gravity="bottom|center_horizontal"
+                android:text="points"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.03"
+                android:gravity="center_horizontal"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".99"
+            android:orientation="horizontal"
+            android:paddingBottom="0dp" >
+
+            <Button
+                android:id="@+id/dec_home_goals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.03"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="-"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/home_goals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".97"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="+"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/home_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".96"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="+"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/dec_home_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.03"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="-"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sspacer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:gravity="center_horizontal"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/dec_opp_goals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.03"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="-"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/opp_goals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".97"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="+"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/opp_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".96"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="+"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/dec_opp_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.03"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="-"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.06"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="1.03"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="total:"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/home_total"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="(00)"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/up_down_draw_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".88"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="2dp"
+                android:text="drawn game"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/home_difference"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="(00)"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:text=" "
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="total:"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/opp_total"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_weight=".95"
+                android:gravity="center_horizontal"
+                android:text="(00)"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.05"
+            android:orientation="horizontal"
+            android:padding="0dp" >
+
+            <Button
+                android:id="@+id/reset_timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="reset time"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/reset_score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="reset score"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/reset_stats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="reset stats"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.03"
+            android:orientation="horizontal"
+            android:paddingTop="0dp" >
+
+            <Button
+                android:id="@+id/buttonShotHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="shots"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/buttonFreeHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".9"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="frees conceded"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/buttonFreeOpp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".9"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="frees conceded"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/buttonShotOpp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="shots"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.03"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/buttonPuckHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="puck outs"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/buttonCustomHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".9"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="custom"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/buttonCustomOpp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".9"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="custom"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/buttonPuckOpp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="puck outs"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.05"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bTweet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttond_custom"
+                android:text="tweet score"
+                android:textColor="#000"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/buttonUndo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:text="undo last stats entry"
+                android:textColor="#bbbbbb"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttond_custom"
+                android:text="text score"
+                android:textColor="#000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="stats entries for undo (most recent at top)"
+                android:textColor="#ff0000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fillViewport="false" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textViewStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:lines="5"
+                    android:maxLines="5"
+                    android:text="stats\nstats\nstats\nstats\nstats"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

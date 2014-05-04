@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<previews>
+
+    <preview
+        name="Config1"
+        activity="fm.footballstats.CustomActivity"
+        config="layout-ldltr-sw360dp-w360dp-h640dp-normal-long-port-notnight-xhdpi-finger-keyssoft-nokeys-navhidden-nonav-1280x720-v19"
+        device="4.65in 720p (Galaxy Nexus)"
+        devicestate="Portrait"
+        target="Android 4.4.2"
+        theme="@style/AppTheme" >
+    </preview>
+
+</previews>

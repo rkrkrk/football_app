@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutSetuppm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView20"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/layoutm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.04"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/setup_textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="4dp"
+                    android:text="Date:"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/t_setup_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Enter Date dd/mm/yy"
+                    android:inputType="date"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:textSize="14sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.04"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/setup_textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="4dp"
+                    android:text="Own Team:"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/t_setup_team1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:text="Enter name in manage panel"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.05"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/setup_textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="4dp"
+                    android:text="Opposition Team:"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/t_setup_team2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Enter Oppostion"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.04"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextQ1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="4dp"
+                    android:text="Comment:"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/t_setup_loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Enter Location"
+                    android:includeFontPadding="true"
+                    android:minHeight="32dp"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.05"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textsetuplabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text="touch buttons to select team lineup"
+                    android:textColor="#ff0000"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <Button
+                    android:id="@+id/ButtonP15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="15"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="14"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="13"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <Button
+                    android:id="@+id/ButtonP12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="12"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="11"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="10"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <Button
+                    android:id="@+id/ButtonP09"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:padding="2dp"
+                    android:text="9"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP08"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="8"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <Button
+                    android:id="@+id/ButtonP07"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="7"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP06"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="6"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP05"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="5"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <Button
+                    android:id="@+id/ButtonP04"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="4"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP03"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="3"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/ButtonP02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="2"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <Button
+                    android:id="@+id/ButtonP01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_custom"
+                    android:minHeight="32dp"
+                    android:text="1"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <Button
+                    android:id="@+id/button_setup_pos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minHeight="40dp"
+                    android:minLines="2"
+                    android:text="save current selection to match data"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button_setup_reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttona_custom"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minHeight="40dp"
+                    android:text="reset team selection"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

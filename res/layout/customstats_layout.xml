@@ -9,70 +9,86 @@
     <ScrollView
         android:id="@+id/scrollView22"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="0dp"
+                android:text="these options can be configured/edited in setup"
+                android:textColor="#ff0000"
+                android:textSize="10sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="18dp"
                 android:layout_margin="0dp"
                 android:layout_marginTop="0dp"
                 android:background="#cceeff"
+                android:minHeight="28dp"
                 android:orientation="horizontal"
                 android:padding="0dp" >
 
                 <TextView
-                    android:id="@+id/TextQ1"
+                    android:id="@+id/TextStats1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="#7788ff"
-                    android:gravity="center_horizontal"
-                    android:padding="2dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="0dp"
                     android:text="select outcome"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/TextView02"
+                    android:id="@+id/TextStats2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:background="#7788ff"
                     android:gravity="center_horizontal"
-                    android:padding="2dp"
+                    android:padding="0dp"
                     android:text="select shot type"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="0dp"
                 android:layout_marginTop="0dp"
+                android:layout_weight="1"
                 android:background="#cceeff"
+                android:minHeight="28dp"
                 android:orientation="horizontal"
                 android:padding="0dp" >
 
                 <RadioGroup
                     android:id="@+id/radioGroup_shot_r"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="#aaccdd"
-                    android:measureWithLargestChild="false"
+                    android:measureWithLargestChild="true"
                     android:orientation="vertical" >
 
                     <RadioButton
                         android:id="@+id/radio_shot_r00"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
                         android:paddingRight="2dp"
                         android:text="goal"
                         android:textSize="11sp" />
@@ -80,136 +96,174 @@
                     <RadioButton
                         android:id="@+id/radio_shot_r01"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                         android:paddingRight="2dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="2dp"
                         android:text="point"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_r02"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                         android:paddingRight="2dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="2dp"
                         android:text="wide"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_r03"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                         android:paddingRight="2dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="2dp"
                         android:text="45/65"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_r04"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                         android:paddingRight="2dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="2dp"
                         android:text="saved"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_r05"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                         android:paddingRight="2dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="2dp"
                         android:text="short"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_r06"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
                         android:paddingRight="2dp"
                         android:text="off posts"
                         android:textSize="11sp" />
 
+                    <RadioButton
+                        android:id="@+id/radio_shot_r07"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="2dp"
+                        android:text="off posts"
+                        android:textSize="11sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_shot_r08"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="2dp"
+                        android:text="off posts"
+                        android:textSize="11sp" />
                 </RadioGroup>
 
                 <RadioGroup
                     android:id="@+id/radioGroup_shot_t"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:background="#aaccdd"
-                    android:measureWithLargestChild="false"
                     android:orientation="vertical" >
 
                     <RadioButton
                         android:id="@+id/radio_shot_t00"
                         android:layout_width="match_parent"
-                        android:layout_height="33dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="1"
+                        android:minHeight="25dp"
                         android:paddingRight="4dp"
-                        android:text="FROM PLAY (kick)"
+                        android:text="hand/air strike"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_t01"
                         android:layout_width="match_parent"
-                         android:paddingRight="4dp"
-                        android:layout_height="33dp"
-                        android:text="FROM PLAY (by hand)"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="4dp"
+                        android:text="hand/air strike"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_t02"
                         android:layout_width="match_parent"
-                         android:paddingRight="4dp"
-                        android:layout_height="27dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="4dp"
                         android:text="free"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_t03"
                         android:layout_width="match_parent"
-                         android:paddingRight="4dp"
-                        android:layout_height="27dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="4dp"
                         android:text="45/65"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_t04"
                         android:layout_width="match_parent"
-                         android:paddingRight="4dp"
-                        android:layout_height="27dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="4dp"
                         android:text="sideline"
                         android:textSize="11sp" />
 
                     <RadioButton
                         android:id="@+id/radio_shot_t05"
                         android:layout_width="match_parent"
-                         android:paddingRight="4dp"
-                        android:layout_height="27dp"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="4dp"
+                        android:text="penalty"
+                        android:textSize="11sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_shot_t06"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="4dp"
+                        android:text="penalty"
+                        android:textSize="11sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_shot_t07"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="4dp"
+                        android:text="penalty"
+                        android:textSize="11sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_shot_t08"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:minHeight="25dp"
+                        android:paddingRight="4dp"
                         android:text="penalty"
                         android:textSize="11sp" />
                 </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="#cceeff"
-                android:orientation="horizontal"
-                android:padding="0dp" >
-
-                <TextView
-                    android:id="@+id/shotlabel1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#7788ff"
-                    android:gravity="center_horizontal"
-                    android:padding="2dp"
-                    android:text="select player"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/layoutm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:orientation="vertical" >

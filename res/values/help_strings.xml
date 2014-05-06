@@ -34,15 +34,16 @@ can be returned to using the <b>change panel</b> option<br/>
 • <b>change panel</b> changes to another previously entered panel. <br/>
 • <b>rename panel</b> changes the name of a panel.  Select the panel you want to rename and enter a new name<br/>
 • <b>delete panel</b> select panel to delete<br/>
-• <b>import panel</b> load a saved panel from storage. Enter the name of a previously saved panel. Note:
-Panels must be stored in the <b>match_BU</b> directory on your devices External storage directory.
-You can use a File Explorer App to view contents of <b>match_BU</b> directory<br/>
+• <b>import panel</b> load a saved panel from storage. You will need to have a file explorer APP 
+(e.g. ES File Explorer) installed to list the available files. Note:
+Panel files are stored by default in the <b>match_team</b> directory on your devices External storage directory.
+You can use a File Explorer App to view contents of <b>match_team</b> directory<br/>
 • <b>export panel</b> save the current panel to the device (panels are stored in a directory
- named match_BU)<br/>
+ named match_team)<br/>
  </p><br/>
  <p><b>Importing existing panels</b> <br/>
-If you have an existing panel (in a spreadsheet for example), format it as a csv file and put in the match_BU
-directory on your devices exteranal storage to import it
+If you have an existing panel (in a spreadsheet for example), format it as a csv file and put in the match_team
+directory on your devices external storage to import it
  to the app.  The easist way to get the correct format is to examine an exported file.
  </p>
  
@@ -74,9 +75,7 @@ View list of match statistics
 <p>
 <b>LongPress</b> a <i>row</i> to get options to delete it<br/>
 </p>
-<p>
-Touch <b>Save</b> to create a new player or save edits to an existing player.
-</p>
+
 ]]>
     </string>
     <string name="trainingHelp">
@@ -125,27 +124,33 @@ Long press on a row/date to delete details of a specific training session.
 <![CDATA[
 <p><b>Contact Details: <br/>
 email:</b> gaaapps@gmail.com<br/>
-<b>twitter: follow @gaaapps</b> for updates
+<b>twitter: follow @gaaapps</b> for updates<br/>
+If you are interested in a customised version or additional features 
+or in training in how to use the App, please contact
+email address.
 </p>
 
  <p>This App allows you to:<br/>
 	• to store contact details for a panel of players<br/>
 	• to record attendance at training<br/>
  	• time and keep score for a football match<br/>
-	 • record team and player performance stastics<br/>
-	• review summary statistics<br/>
- 	• save / share / email raw data in a csv format which can be opened in spreadsheet
+	 • record team and player performance statistics<br/>
+	• review some summary statistics instantly<br/>
+ 	• save / share / email raw statistucs data in a csv format which can be opened in spreadsheet
  	software for more detailed analysis later<br/>
   </p>
+  
+ <p>It is recommended that you install the Twitter App and a File Explorer App
+ (e.g. ES File Explorer) on your device to make use of all the features of this App<p>
  
- <p>Use the <b>manage panel</b> section to enter your team name and players.  Record and monitor
- attendance in the <b>manage attendance</b> section.  Long press on <b>start new match</b> to select a team
- lineup, time and record match stats, and to review stats for a new match. Click on
+ <p>Use the <b>manage panel</b> section to enter your team name and players.<br/>  Record and monitor
+ attendance in the <b>manage attendance</b> section.<br/>  Long press on <b>start new match</b> to select a team
+ lineup, time and record match stats, and to review stats for a new match.<br/> Click on
  <b>continue existing match</b> to return to details of an existing match. <br/>
  After a match is complete, click on <b>save/share match data</b> to save and share/email a full set
   of match events, scores, stats, team lineups.  This data can be opened as a spreadsheet for more
   detailed analysis subsequently.<br/>
-  <b>setup</b> allows you to configure certains settings in the App and to condigure custom
+  <b>setup</b> allows you to configure certain settings in the App and to configure custom
   statistics for your own use.<br/>
  
  
@@ -166,7 +171,7 @@ email:</b> gaaapps@gmail.com<br/>
  <b>start new match</b><br/> 
  (you have to long press button to get this to work)<br/>
  	<b>NOTE:</b>All match related data - timer/scores/statistics -  is 
- 	deleted/reset and a new match setup will begin.<br/><br/>
+ 	deleted/reset and a new match setup will begin.<br/>
  	Panel details and the team lineup from the previous match are retained.
  </p>
  <p>
@@ -180,7 +185,7 @@ What it says!.  All current match data is retained.
 	Files stored/emailed are:<br/>
 	• shots.csv <br/>
 	• frees.csv <br/>
-	• puckouts.csv <br/>
+	• kickouts.csv <br/>
 	• custom.csv <br/>
 	• positions.csv <br/>
 	The .csv files can be opened with spreadsheet software<br/>
@@ -211,46 +216,27 @@ What it says!.  All current match data is retained.
  By default, the team selection from the last match is retained so you can edit
  it rather than start from scratch. To clear the team selection long press the <b>
  reset team</b> button.
- <br/><br/>You select 15 players and up to 10 subs. 
  </p>
  <p>
 Enter <i><b>Date, Opposition Team name</i> and <i>Location</i></b> at top of the screen. Own team 
-name defaults to the current panel name.  To change it go into the manage panel section.
+name defaults to the current panel name.  To change it go into the <b>manage panel</b> section.
 </p>
  <p>
 To select the team, touch on one of the position buttons.  This will display a list of 
 players on your panel. Swipe/scroll, if necessary, to see all players and touch one to select.  
-Repeat for all the positions and subs.<br/><br/>
+Repeat for all the positions<br/><br/>
 
 It is not necessary to select a player for all or any of the positions, you can just leave the 
 number if you prefer.
 </p>
-<p>
- When you are finished, touch the <b>save starting team</b> button to save the starting lineup.
-<br/><br/>You can only save starting team once. You will get a message if you try again. 
-Quit back out to <b>start screen</b> and <b>start new match</b> again if you want to enter 
-a new team selection.
- </p>
+
  <p>
-To make a postion change or substitution use the -SWAP- item in the panel list. For example: to
-substitute the goalkeeper: <br/>• touch the goalkeeper position button and select -SWAP- from the 
-list of players. <br/>•This will remove the goalkeepers name  onto the list of players and insert
- -SWAP- into the team lineup. <br/>•Then touch on the button of the sub you want to use. 
- <br/>•Select the goalkeepers name from the list of players. <br/>•This will remove the subs 
- name onto the list of players and swap in the goalkeepers name as the sub. <br/>• Now touch
- on the goalkeeper position button and select the subs name from the list of players.<br/>•
- This will swap the subs name into the team line up and remove -SWAP- to the list of players
- again.<br/>•touch the <b>make change</b> button to save the 
- change.<br/><br/>
-  
- The same procedure applies to making postion changes - swap in -SWAP- to take a player out, 
- swap that player into their new position, put the player swapped out of that position back 
- into the first position instead of -SWAP- and touch the <b>make change</b> button to save the 
- change.<br/><br/>
- 
- After making a substitution or position change, touch the <b>make change</b> button to save 
- the changes. 
- 
+Select <b>RESET POSITION TO NUMBER</b> to reset any position.<br/><br/> 
+ </p> 
+ <p>
+If you need to enter new player names, use the <b>back</b> button to get out to 
+the home menu screen and go into the <b>manage panel</b> section. When you have finished
+entering new names touch <b> continue existing match </b> to continue setting up team.
  </p>
 <p><b>swipe screen or touch tab at top to change to <b>RECORD</b> or <b>REVIEW</b> screens.</b></p>
 <p><b>touch back button to return to Start screen.<b>
@@ -283,10 +269,10 @@ list of players. <br/>•This will remove the goalkeepers name  onto the list of
  </p>
  <p>
  <b>RECORD STATS SECTION</b><br/>
- In this section you can record info/statistics pertaining to shots, frees and puck outs
+ In this section you can record info/statistics pertaining to shots, frees and kick outs
  for your own team and the opposition. Own team always refers to the team on the left
  of the screen<br/><br/>
- Touch the <b>shot / free / puck out</b> buttons to record stats. <br/><br/>
+ Touch the <b>shot / free / kick out / custom</b> buttons to record stats. <br/><br/>
  The five most recent stats entries recorded are displayed at bottom of screen. If you make a mistake,
  press <b>undo last stats entry</b> to delete the most recent entry and then reenter the stat <br/><br/>
  
@@ -298,22 +284,33 @@ list of players. <br/>•This will remove the goalkeepers name  onto the list of
  • for opposition team, the player number who took shot<br/>
  • zone on pitch from where shot was taken. (Note your own goal is always at the 
  bottom of screen with  opposition on top.)
+ 
  <br/><br/> 
  <b>2. Frees</b><br/>
  You can record:<br/>
- • reason for free<br/>
-  • zone on pitch where free was awarded<br/>
+ • reason for free (note that these can be customised in the <b>setup</b> section.<br/>
+  • zone on pitch where free was conceded<br/>
  
- • for your own team, which player, if applicable, was fouled.  <br/>
- • for opposition team, if applicable, which of your own players was responsible for giving away the free<br/>
+ • for your own team, which player, if applicable, was committed the foul.  <br/>
+ • for opposition team, if applicable, which of your own players was responsible for winning the free<br/>
  <br/><br/>
- <b>3. Puck Outs</b><br/>
+ 
+ <b>3. Kick Outs</b><br/>
    You can record:<br/>
- • puck out outcome<br/>
-  • zone on pitch where puck out was won or lost<br/>
+ • kick out outcome<br/>
+  • zone on pitch where kick out was won or lost<br/>
 
- • for your own team, which player, if applicable, won or lost the puck out<br/>
+ • for your own team, which player, if applicable, won or lost the kick out<br/>
+ <br/><br/>
+
+ <b>4. custom</b><br/>
+   You can record custom stats / events:<br/>
+ • custom stats/events can be configured in the <b>setup</b> section<br/>
+ • which player is associated with the event/stat<br/>
+  • zone on pitch where event/stat occured<br/>
+ 
  </p>
+ 
 <p>
 Touch <b>undo last stats entry</b> to delete the last stats entry if you made an error.
 You can delete up to the 5 most recent entries.
@@ -328,11 +325,9 @@ You can delete up to the 5 most recent entries.
  <h1>HELP - REVIEW screen </h1>
   <p>
  The review screen presents a summary of recorded statistics for the current match. <br/> <br/>
- In the <b>shots</b> and <b>puckouts section</b> the numbers are as a percentage for each team.<br/> <br/>
- In the <b>free</b> setion the numbers are as a percentage of the total frees awared in the match.
  </p>
 <p>
- The <b>review shots, review frees</b> and <b>review puckouts</b> buttons display a detailed list
+ The <b>shots by player, review shots, review frees, review kickouts</b> and <b>review custom</b> buttons display a detailed list
  of all data / statistics recorded.<br/>
 
 <p><b>touch back button to return to Start screen.</b></p>

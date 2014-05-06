@@ -33,7 +33,7 @@ public class CustomActivity extends Activity {
 	private String[] CUSTOMAP = new String[9];
 	private String[] CUSTOMB = new String[9];
 	private String[] CUSTOMBP = new String[9];
-	private String[] FREE = new String[8];
+	private String[] FREE = new String[10];
 	private String[] FREEP = new String[10];
 	private EditText cTitle1, cTitle2;
 
@@ -94,21 +94,21 @@ public class CustomActivity extends Activity {
 					.getIdentifier("etTA" + String.format("%02d", i + 1), "id",
 							"fm.footballstats"));
 		}
-		etCustomA[0].setText(sharedPrefSetup.getString(CUSTOMA[0], "shot"));
+		etCustomA[0].setText(sharedPrefSetup.getString(CUSTOMA[0], "hand pass complete"));
 		etCustomA[1].setText(sharedPrefSetup
-				.getString(CUSTOMA[1], "block made"));
-		etCustomA[2].setText(sharedPrefSetup.getString(CUSTOMA[2], "blocked"));
+				.getString(CUSTOMA[1], "hand pass fail"));
+		etCustomA[2].setText(sharedPrefSetup.getString(CUSTOMA[2], "kick pass complete"));
 		etCustomA[3]
-				.setText(sharedPrefSetup.getString(CUSTOMA[3], "hook made"));
-		etCustomA[4].setText(sharedPrefSetup.getString(CUSTOMA[4], "hooked"));
+				.setText(sharedPrefSetup.getString(CUSTOMA[3], "kick pass fail"));
+		etCustomA[4].setText(sharedPrefSetup.getString(CUSTOMA[4], "possession won"));
 		etCustomA[5].setText(sharedPrefSetup.getString(CUSTOMA[5],
-				"lift success"));
+				"possession lost"));
 		etCustomA[6]
-				.setText(sharedPrefSetup.getString(CUSTOMA[6], "lift fail"));
+				.setText(sharedPrefSetup.getString(CUSTOMA[6], "block"));
 		etCustomA[7]
-				.setText(sharedPrefSetup.getString(CUSTOMA[7], "hand pass"));
+				.setText(sharedPrefSetup.getString(CUSTOMA[7], "tackle made"));
 		etCustomA[8].setText(sharedPrefSetup.getString(CUSTOMA[8],
-				"struck pass"));
+				"custom option"));
 
 		for (int i = 0; i < 9; i++) {
 			CUSTOMBP[i] = "CustomBP" + String.format("%02d", i);
@@ -122,20 +122,20 @@ public class CustomActivity extends Activity {
 		etCustomB[1].setText(sharedPrefSetup.getString(CUSTOMB[1],
 				"poor option"));
 		etCustomB[2].setText(sharedPrefSetup.getString(CUSTOMB[2],
-				"ruck ball won"));
+				"black card"));
 		etCustomB[3].setText(sharedPrefSetup.getString(CUSTOMB[3],
-				"ruck ball lost"));
+				"yellow card"));
 		etCustomB[4].setText(sharedPrefSetup.getString(CUSTOMB[4],
-				"possession won"));
+				"red card"));
 		etCustomB[5].setText(sharedPrefSetup.getString(CUSTOMB[5],
-				"possession lost"));
-		etCustomB[6].setText(sharedPrefSetup.getString(CUSTOMB[6], "catch"));
+				"custom option"));
+		etCustomB[6].setText(sharedPrefSetup.getString(CUSTOMB[6], "custom option"));
 
-		etCustomB[7].setText(sharedPrefSetup.getString(CUSTOMB[7], "good"));
-		etCustomB[8].setText(sharedPrefSetup.getString(CUSTOMB[8], "poor"));
+		etCustomB[7].setText(sharedPrefSetup.getString(CUSTOMB[7], "custom option"));
+		etCustomB[8].setText(sharedPrefSetup.getString(CUSTOMB[8], "custom option"));
 
 		// frees
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < 10; i++) {
 			FREEP[i] = "FreeP" + String.format("%02d", i);
 			FREE[i] = "Free" + String.format("%02d", i);
 			free[i] = (EditText) findViewById(getResources().getIdentifier(
@@ -225,24 +225,24 @@ public class CustomActivity extends Activity {
 		for (int i = 1; i <= 15; i++) {
 			bb[i].setText(String.valueOf(i));
 		}
-		etCustomA[0].setText("shot");
-		etCustomA[1].setText("block made");
-		etCustomA[2].setText("blocked");
-		etCustomA[3].setText("hook made");
-		etCustomA[4].setText("hooked");
-		etCustomA[5].setText("lift success");
-		etCustomA[6].setText("lift fail");
-		etCustomA[7].setText("hand pass");
-		etCustomA[8].setText("struck pass");
+		etCustomA[0].setText("hand pass complete");
+		etCustomA[1].setText("hand pass fail");
+		etCustomA[2].setText("kick pass complete");
+		etCustomA[3].setText("kick pass fail");
+		etCustomA[4].setText("possession won");
+		etCustomA[5].setText("possession lost");
+		etCustomA[6].setText("block");
+		etCustomA[7].setText("tackle made");
+		etCustomA[8].setText("custom option");
 		etCustomB[0].setText("good option");
 		etCustomB[1].setText("poor option");
-		etCustomB[2].setText("ruck ball won");
-		etCustomB[3].setText("ruck ball lost");
-		etCustomB[4].setText("possession won");
-		etCustomB[5].setText("possession lost");
-		etCustomB[6].setText("catch");
-		etCustomB[7].setText("good");
-		etCustomB[8].setText("poor");
+		etCustomB[2].setText("black card");
+		etCustomB[3].setText("yellow card");
+		etCustomB[4].setText("red card");
+		etCustomB[5].setText("custom option");
+		etCustomB[6].setText("custom option");
+		etCustomB[7].setText("custom option");
+		etCustomB[8].setText("custom option");
 		cTitle1.setText("stats 1");
 		cTitle2.setText("stats 2");
 		free[0].setText("steps");

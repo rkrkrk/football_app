@@ -266,7 +266,7 @@ public class StartupActivity extends FragmentActivity {
 						Environment.getExternalStorageDirectory()
 								+ "/match_BU/" + "frees.csv",
 						Environment.getExternalStorageDirectory()
-								+ "/match_BU/" + "puckouts.csv",
+								+ "/match_BU/" + "kickouts.csv",
 						Environment.getExternalStorageDirectory()
 								+ "/match_BU/" + "custom.csv",
 						Environment.getExternalStorageDirectory()

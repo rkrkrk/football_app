@@ -367,8 +367,8 @@ public class MatchReviewFragment extends Fragment {
 				type = c1.getString(c1
 						.getColumnIndexOrThrow(ShotContentProvider.TYPE));
 				if (type == null || type.equals("")
-						|| type.substring(0, 2).equals("ai")
-						|| type.substring(0, 2).equals("gr")) {
+						|| type.substring(0, 2).equals("ki")
+						|| type.substring(0, 2).equals("by")) {
 					fromPlay = true;
 				}
 				if (outcome.equals("goal")) {
@@ -471,8 +471,8 @@ public class MatchReviewFragment extends Fragment {
 				type = c1.getString(c1
 						.getColumnIndexOrThrow(ShotContentProvider.TYPE));
 				if (type == null || type.equals("")
-						|| type.substring(0, 2).equals("ai")
-						|| type.substring(0, 2).equals("gr")) {
+						|| type.substring(0, 2).equals("ki")
+						|| type.substring(0, 2).equals("by")) {
 					fromPlay = true;
 				}
 				if (outcome.equals("goal")) {
@@ -679,7 +679,7 @@ public class MatchReviewFragment extends Fragment {
 			c1.close();
 		}
 		puckTotalHome = shotGoalsOpp + shotPointsOpp + shotWidesOpp;
-		tPuckTotalHome.setText("Total Puckouts: "
+		tPuckTotalHome.setText("Total Kickouts: "
 				+ String.valueOf(puckTotalHome)
 				+ "   Won: "
 				+ String.valueOf(puckWonCatchHome + puckWonCleanHome
@@ -744,7 +744,7 @@ public class MatchReviewFragment extends Fragment {
 			c1.close();
 		}
 		puckTotalOpp = shotGoalsHome + shotPointsHome + shotWidesHome;
-		tPuckTotalOpp.setText("Total Puckouts: "
+		tPuckTotalOpp.setText("Total Kickouts: "
 				+ String.valueOf(puckTotalOpp)
 				+ "   Won: "
 				+ String.valueOf(puckWonCatchOpp + puckWonCleanOpp

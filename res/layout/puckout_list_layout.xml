@@ -18,7 +18,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:padding="2dp"
-            android:text="puck outs"
+            android:text="kick outs"
             android:textSize="14sp"
             android:textStyle="bold" />
     </LinearLayout>

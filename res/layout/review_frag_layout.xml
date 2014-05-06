@@ -3,6 +3,7 @@
     android:id="@+id/layoutRevm"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#ffffee"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical" >
@@ -590,7 +591,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight=".8"
                             android:gravity="center_vertical|left"
-                            android:text="Puckouts"
+                            android:text="Kick outs"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -624,7 +625,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1.5"
                             android:gravity="left|center_vertical"
-                            android:text="Total Puckouts"
+                            android:text="Total Kickouts"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1452,7 +1453,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight=".8"
                             android:gravity="center_vertical|left"
-                            android:text="Puckouts"
+                            android:text="Kick Outs"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -1486,7 +1487,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1.5"
                             android:gravity="left|center_vertical"
-                            android:text="Total Puckouts"
+                            android:text="Total Kick outs"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1769,7 +1770,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="review puckouts"
+                    android:text="review kickouts"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textSize="10sp" />
 

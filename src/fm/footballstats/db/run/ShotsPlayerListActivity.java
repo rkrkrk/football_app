@@ -80,7 +80,7 @@ public class ShotsPlayerListActivity extends ListActivity {
 						.getColumnIndexOrThrow(ShotContentProvider.TYPE));
 				data[5] = c1.getString(c1
 						.getColumnIndexOrThrow(ShotContentProvider.PLAYER_ID));
-				//sort out player 
+				// sort out player
 				str = c1.getString(c1.getColumnIndexOrThrow("panel_nickname"));
 				if ((str == null) || str.equals("")) {
 					data[3] = "unknown";
@@ -90,7 +90,7 @@ public class ShotsPlayerListActivity extends ListActivity {
 					} catch (NumberFormatException nfe) {
 						Log.v("matchrecord", "player input error #01");
 					}
-					if (playerNo > 0){
+					if (playerNo > 0) {
 						data[3] = Integer.toString(playerNo);
 					}
 				} else {
@@ -99,7 +99,7 @@ public class ShotsPlayerListActivity extends ListActivity {
 				}
 				data[4] = c1.getString(c1
 						.getColumnIndexOrThrow(ShotContentProvider.POSITION));
-				
+
 				listCursor.add(data);
 			} while (c1.moveToNext());
 			c1.close();
@@ -179,29 +179,30 @@ public class ShotsPlayerListActivity extends ListActivity {
 						}
 					}
 					// if placed create new or update entry
-					if (!play) {
-						boolean gotcha = false;
-						for (int i = 0; i < shotsArray.size(); i++) {
-							if (str.equals(shotsArray.get(i).getName())
-									&& shotsArray.get(i).isPlay() == false
-									&& str1.equals(shotsArray.get(i).getTeam())) {
-								shotsArray.get(i).setTotal(total);
+					boolean gotcha = false;
+					for (int i = 0; i < shotsArray.size(); i++) {
+						if (str.equals(shotsArray.get(i).getName())
+								&& shotsArray.get(i).isPlay() == false
+								&& str1.equals(shotsArray.get(i).getTeam())) {
+							shotsArray.get(i).setTotal(total);
+							if (!play) {
 								shotsArray.get(i).updateGoals(goals);
 								shotsArray.get(i).updatePoints(points);
 								shotsArray.get(i).updateWides(wides);
 								shotsArray.get(i).updateMisses(misses);
-								gotcha = true;
-								break;
 							}
+							gotcha = true;
+							break;
 						}
-						if (!gotcha) {
-							// create new entry
-							shotsArray.add(new Shot(listCursor.get(0)[0],
-									listCursor.get(0)[3], play, total, goals,
-									points, wides, misses));
-						}
-
 					}
+
+					if (!gotcha && !play) {
+						// create new entry
+						shotsArray.add(new Shot(listCursor.get(0)[0],
+								listCursor.get(0)[3], play, total, goals,
+								points, wides, misses));
+					}
+
 				}
 				listCursor.remove(0);
 
@@ -226,10 +227,8 @@ public class ShotsPlayerListActivity extends ListActivity {
 				}
 				if (result == 0) {
 					result = p1Name.compareTo(p2Name);
-					Log.e("r1"," "+p1Name+result+p2Name);
 				}
 				if (result == 0) {
-					Log.e("r2"," "+p1play+" 2"+p2play);
 					result = p2play ? 1 : 0;
 				}
 

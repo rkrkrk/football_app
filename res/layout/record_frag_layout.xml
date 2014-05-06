@@ -3,6 +3,7 @@
     android:id="@+id/layoutRecorddm"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffee"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical" >
@@ -603,7 +604,7 @@
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
-                android:text="puck outs"
+                android:text="kick outs"
                 android:textSize="12sp" />
 
             <Button
@@ -635,7 +636,7 @@
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
-                android:text="puck outs"
+                android:text="kick outs"
                 android:textSize="12sp" />
         </LinearLayout>
 

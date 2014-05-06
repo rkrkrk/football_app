@@ -165,7 +165,7 @@ public class CSVExport extends AsyncTask<String, Void, Boolean> {
 			}
 
 			// write data from puckouts table of database
-			file = new File(exportDir,  "puckouts.csv");
+			file = new File(exportDir,  "kickouts.csv");
 			try {
 				file.createNewFile();
 				// cvsWrite object facilitates parsing data to csv file

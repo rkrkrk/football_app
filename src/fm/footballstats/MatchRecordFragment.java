@@ -152,35 +152,35 @@ public class MatchRecordFragment extends Fragment {
 			CUSTOMAP[i] = "CustomAP" + String.format("%02d", i);
 			CUSTOMBP[i] = "CustomBP" + String.format("%02d", i);
 		}
-		customResultStr[0] = (sharedPrefSetup.getString(CUSTOMAP[0], "shot"));
-		customResultStr[1] = (sharedPrefSetup.getString(CUSTOMAP[1], "block made"));
+		customResultStr[0] = (sharedPrefSetup.getString(CUSTOMAP[0], "hand pass complete"));
+		customResultStr[1] = (sharedPrefSetup.getString(CUSTOMAP[1], "hand pass fail"));
 		customResultStr[2] = (sharedPrefSetup.getString(CUSTOMAP[2],
-				"blocked"));
+				"kick pass complete"));
 		customResultStr[3] = (sharedPrefSetup.getString(CUSTOMAP[3],
-				"hook made"));
+				"kick pass fail"));
 		customResultStr[4] = (sharedPrefSetup.getString(CUSTOMAP[4],
-				"hooked"));
+				"possession won"));
 		customResultStr[5] = (sharedPrefSetup.getString(CUSTOMAP[5],
-				"lift success"));
+				"possession lost"));
 		customResultStr[6] = (sharedPrefSetup.getString(CUSTOMAP[6],
-				"lift fail"));
+				"block"));
 		customResultStr[7] = (sharedPrefSetup.getString(CUSTOMAP[7],
-				"hand pass"));
+				"tackle made"));
 		customResultStr[8] = (sharedPrefSetup.getString(CUSTOMAP[8],
-				"struck pass"));
+				"custom option"));
 		customTypeStr[0] = (sharedPrefSetup.getString(CUSTOMBP[0],
 				"good option"));
 		customTypeStr[1] = (sharedPrefSetup.getString(CUSTOMBP[1],
 				"poor option"));
-		customTypeStr[2] = (sharedPrefSetup.getString(CUSTOMBP[2], "ruck ball won"));
-		customTypeStr[3] = (sharedPrefSetup.getString(CUSTOMBP[3], "ruck ball lost"));
+		customTypeStr[2] = (sharedPrefSetup.getString(CUSTOMBP[2], "black card"));
+		customTypeStr[3] = (sharedPrefSetup.getString(CUSTOMBP[3], "yellow card"));
 		customTypeStr[4] = (sharedPrefSetup.getString(CUSTOMBP[4],
-				"possession won"));
+				"red card"));
 		customTypeStr[5] = (sharedPrefSetup.getString(CUSTOMBP[5],
-				"possession lost"));
-		customTypeStr[6] = (sharedPrefSetup.getString(CUSTOMBP[6], "catch"));
-		customTypeStr[7] = (sharedPrefSetup.getString(CUSTOMBP[7], "good"));
-		customTypeStr[8] = (sharedPrefSetup.getString(CUSTOMBP[8], "poor"));
+				"custom option"));
+		customTypeStr[6] = (sharedPrefSetup.getString(CUSTOMBP[6], "custom option"));
+		customTypeStr[7] = (sharedPrefSetup.getString(CUSTOMBP[7], "custom option"));
+		customTypeStr[8] = (sharedPrefSetup.getString(CUSTOMBP[8], "custom option"));
 		cTitle1 = sharedPrefSetup.getString("CTITLE1P", "stats 1");
 		cTitle2 = sharedPrefSetup.getString("CTITLE2P", "stats 2");
 		// read in free from setup
@@ -1888,10 +1888,10 @@ public class MatchRecordFragment extends Fragment {
 					|| (SHOT_FREE_PUCK_OUT == R.id.buttonShotOpp)) {
 				switch (vvv.getId()) {
 				case R.id.radio_shot_t00:
-					shotType = "air strike";
+					shotType = "kick";
 					break;
 				case R.id.radio_shot_t01:
-					shotType = "ground strike";
+					shotType = "by hand";
 					break;
 				case R.id.radio_shot_t02:
 					shotType = "free";

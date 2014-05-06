@@ -29,6 +29,7 @@ import android.os.Environment;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.ActivityNotFoundException;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.CursorLoader;
@@ -81,10 +82,9 @@ public class PanelListActivity extends ListActivity {
 
 		SharedPreferences sharedPref = getSharedPreferences("panellist",
 				Context.MODE_PRIVATE);
-		panelName = sharedPref.getString("PANELNAME", null);
+		panelName = sharedPref.getString("PANELNAME", "MyTeam");
 
-		if (panelName != null)
-			tPanelName.setText("Panel name: " + panelName);
+		tPanelName.setText("Panel name: " + panelName);
 		// call method to list players
 		fillData();
 		// set up long click method
@@ -131,9 +131,11 @@ public class PanelListActivity extends ListActivity {
 
 		// load database info from PanelContentProvider into a cursor and use an
 		// adapter to display on screen
-		CursorLoader cL = new CursorLoader(this, allTitles, projection,
-				selection, null, PanelContentProvider.NICKNAME);
-		c1 = cL.loadInBackground();
+//		CursorLoader cL = new CursorLoader(this, allTitles, projection,
+//				selection, null, PanelContentProvider.NICKNAME);
+//		c1 = cL.loadInBackground();
+		c1 = getContentResolver().query(allTitles, projection, selection, null,
+				PanelContentProvider.NICKNAME);
 		SimpleCursorAdapter reminders = new SimpleCursorAdapter(this,
 				R.layout.panel_row_layout, c1, from, to, 0);
 		setListAdapter(reminders);
@@ -273,7 +275,8 @@ public class PanelListActivity extends ListActivity {
 
 		case R.id.loadPanel:
 			// call method to load a saved panel from the device storage
-			inputPanelName(LOAD_FILE);
+			// inputPanelName(LOAD_FILE);
+			loadPanel();
 			return true;
 		}
 		return super.onMenuItemSelected(featureId, item);
@@ -381,9 +384,15 @@ public class PanelListActivity extends ListActivity {
 		// create file in the devices storage directory
 		if (panelName != null) {
 
+			File saveDir = new File(Environment.getExternalStorageDirectory(),
+					"match_teams");
+			if (!saveDir.exists()) {
+				saveDir.mkdirs();
+			}
+
 			String fname = Environment.getExternalStorageDirectory()
-					+ File.separator + "match_BU" + File.separator + panelName
-					+ ".csv";
+					+ File.separator + "match_teams" + File.separator
+					+ panelName + ".csv";
 
 			File f = new File(fname);
 			try {
@@ -416,15 +425,27 @@ public class PanelListActivity extends ListActivity {
 
 	}
 
+	public void loadPanel() {
+		try {
+			Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+			Uri uri = Uri.parse(Environment.getExternalStorageDirectory()
+					.getPath() + "/match_teams/");
+			intent.setDataAndType(uri, "text/csv");
+			startActivityForResult(intent, 99);
+		} catch (ActivityNotFoundException exp) {
+			Toast.makeText(
+					getBaseContext(),
+					"You need to install a File Explorer App to find files on your device e.g. ES FILE EXPLORER",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
 	// method to load panel from existing csv file
-	private void loadPanel() {
+	private void readPanel(String fname) {
 		ContentValues values = new ContentValues();
 		String[] inputCSV;
 		int readOK = 0;
-		// get storage directory
-		String fname = Environment.getExternalStorageDirectory()
-				+ File.separator + "match_BU" + File.separator + panelName
-				+ ".csv";
+
 		if (new File(fname).exists()) {
 			try {
 				FileInputStream fileStream = new FileInputStream(fname);
@@ -434,6 +455,41 @@ public class PanelListActivity extends ListActivity {
 				CSVReader csvRead = new CSVReader(inStreamReader);
 				// throw away the header
 				csvRead.readNext();
+				// sortoutname
+				inputCSV = csvRead.readNext();
+				values.put("firstname", inputCSV[1]);
+				values.put("surname", inputCSV[2]);
+				values.put("nickname", inputCSV[3]);
+				values.put("phone", inputCSV[4]);
+				values.put("address", inputCSV[5]);
+				try {
+					panelName = inputCSV[6];
+				} catch (ArrayIndexOutOfBoundsException e) {
+					Log.e("old file", e.toString());
+					panelName = "???";
+					Toast.makeText(getBaseContext(),
+							"Unable to read that file error:3",
+							Toast.LENGTH_LONG).show();
+				}
+				String panelNameOriginal = panelName;
+				// check if name exists and append number if it does
+				for (int i = 1; i < 10; i++) {
+					String[] args = { panelName };
+					Cursor c1 = getContentResolver().query(
+							PanelContentProvider.CONTENT_URI, null, "panelname=?",
+							args, null);
+					if (c1.getCount() > 0) {
+						// team exists
+						panelName = panelNameOriginal + Integer.toString(i);
+					} else {
+						c1.close();
+						break;
+					}
+				}
+				values.put("panelname", panelName);
+				getContentResolver().insert(
+						PanelContentProvider.CONTENT_URI, values);
+
 				// read in row at a time and write to database using
 				// PanelContentProvider
 				while ((inputCSV = csvRead.readNext()) != null) {
@@ -443,14 +499,7 @@ public class PanelListActivity extends ListActivity {
 					values.put("phone", inputCSV[4]);
 					values.put("address", inputCSV[5]);
 					// old versions of file don't have panelname so use try
-					try {
-						values.put("panelname", inputCSV[6]);
-						panelName = inputCSV[6];
-						readOK = 1;
-					} catch (ArrayIndexOutOfBoundsException e) {
-						Log.e("old file", e.toString());
-					}
-
+					values.put("panelname", panelName);
 					// add to panel database
 					getContentResolver().insert(
 							PanelContentProvider.CONTENT_URI, values);
@@ -459,14 +508,15 @@ public class PanelListActivity extends ListActivity {
 				Toast.makeText(getBaseContext(),
 						"Panel read successfully from\n" + fname,
 						Toast.LENGTH_LONG).show();
-				if (readOK == 0)
-					panelName = null;
 				tPanelName.setText("Panel name: " + panelName);
 				resetTeamLineup();
 
 				fillData();
 			} catch (IOException e) {
 				Log.e("load panel failed", e.getMessage(), e);
+				Toast.makeText(getBaseContext(),
+						"Unable to read that file error:2", Toast.LENGTH_LONG)
+						.show();
 			}
 
 		} else
@@ -729,7 +779,11 @@ public class PanelListActivity extends ListActivity {
 	// updated list of players
 	protected void onActivityResult(int requestCode, int resultCode,
 			Intent intent) {
-		super.onActivityResult(requestCode, resultCode, intent);
-		fillData();
+		if (requestCode == 99) {
+			readPanel(intent.getData().getPath());
+		} else {
+			super.onActivityResult(requestCode, resultCode, intent);
+			fillData();
+		}
 	}
 }

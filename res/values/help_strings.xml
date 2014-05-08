@@ -36,13 +36,13 @@ can be returned to using the <b>change panel</b> option<br/>
 • <b>delete panel</b> select panel to delete<br/>
 • <b>import panel</b> load a saved panel from storage. You will need to have a file explorer APP 
 (e.g. ES File Explorer) installed to list the available files. Note:
-Panel files are stored by default in the <b>match_team</b> directory on your devices External storage directory.
-You can use a File Explorer App to view contents of <b>match_team</b> directory<br/>
+Panel files are stored by default in the <b>match_teams</b> directory on your devices External storage directory.
+You can use a File Explorer App to view contents of <b>match_teams</b> directory<br/>
 • <b>export panel</b> save the current panel to the device (panels are stored in a directory
- named match_team)<br/>
+ named match_teams)<br/>
  </p><br/>
  <p><b>Importing existing panels</b> <br/>
-If you have an existing panel (in a spreadsheet for example), format it as a csv file and put in the match_team
+If you have an existing panel (in a spreadsheet for example), format it as a csv file and put in the match_teams
 directory on your devices external storage to import it
  to the app.  The easist way to get the correct format is to examine an exported file.
  </p>

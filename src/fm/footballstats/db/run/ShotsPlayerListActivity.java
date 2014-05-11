@@ -34,6 +34,8 @@ import android.widget.ListView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.Toast;
 
+
+
 public class ShotsPlayerListActivity extends ListActivity {
 
 	@Override

@@ -472,6 +472,7 @@ public class MatchRecordFragment extends Fragment {
 				v.playSoundEffect(SoundEffectConstants.CLICK);
 				Toast.makeText(getActivity(), "Stats Reset", Toast.LENGTH_SHORT)
 						.show();
+				((MatchApplication) getActivity()).getFragmentReview().fillData();
 				puckOutReason = "";
 				puckOutPlayer = "";
 				puckOutPosn = "";

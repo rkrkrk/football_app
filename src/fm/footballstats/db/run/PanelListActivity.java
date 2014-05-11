@@ -231,6 +231,7 @@ public class PanelListActivity extends ListActivity {
 		menuAction.inflate(R.menu.list_menu, menu);
 		return true;
 	}
+	
 
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
@@ -779,7 +780,7 @@ public class PanelListActivity extends ListActivity {
 	// updated list of players
 	protected void onActivityResult(int requestCode, int resultCode,
 			Intent intent) {
-		if (requestCode == 99) {
+		if (requestCode == 99 && resultCode == -1) {
 			readPanel(intent.getData().getPath());
 		} else {
 			super.onActivityResult(requestCode, resultCode, intent);

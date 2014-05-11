@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">GAA Football</string>
+    <string name="app_name">Football GAA</string>
     <string name="menu_settings">Settings</string>
     <string name="no_names">No Data Yet</string>
     <string name="firstname">Enter Firstname:</string>

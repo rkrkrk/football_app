@@ -19,6 +19,7 @@ import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 
 import fm.footballstats.R;
+import fm.footballstats.db.CustomContentProvider;
 import fm.footballstats.db.FreeContentProvider;
 import fm.footballstats.db.MatchContentProvider;
 import fm.footballstats.db.PositionContentProvider;
@@ -150,6 +151,9 @@ public class StartupActivity extends FragmentActivity {
 						null, null);
 				getContentResolver().delete(
 						Uri.parse(PositionContentProvider.CONTENT_URI + "/"),
+						null, null);
+				getContentResolver().delete(
+						Uri.parse(CustomContentProvider.CONTENT_URI + "/"),
 						null, null);
 
 				Intent intent6 = new Intent(v.getContext(),
